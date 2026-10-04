@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة أبو سيفين للمواتير ومستلزماتها</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --secondary-color: #1976d2;
+            --accent-color: #e65100;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .origin-badge {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 15px;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .specs-list {
+            list-style-type: none;
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .specs-list li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-right: 15px;
+        }
+
+        .specs-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+
+        .card-footer {
+            padding: 15px;
+            background-color: #fafafa;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .price-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>شركة أبو سيفين للمواتير ومستلزماتها</h1>
+        <p>كتالوج المنتجات والأسعار الرسمية</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- القسم الأول: مواتير المياه -->
+        <h2 class="section-title">💧 قسم مواتير المياه</h2>
+        <div class="grid">
+            
+            <!-- منتج 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Gent - موتور مياه 1 حصان</h3>
+                    <span class="origin-badge">Made in Germany 🇩🇪</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>موبينة 6 بقطر كبير</li>
+                        <li>ملفات نحاس 100%</li>
+                        <li>عمود استانلس ستيل</li>
+                        <li>مروحة نحاس ووش توجيه زهر</li>
+                        <li>عزل ضد الصدأ ومعالج حرارياً</li>
+                        <li>مزود بشيك بلف، يد، وفيشة</li>
+                        <li>فتحة دخول وخروج 1 بوصة</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">3,800 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Carlos - موتور 1 حصان (JET-70)</h3>
+                    <span class="origin-badge">Made in Germany 🇩🇪</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>موبينة 7 بقطر كبير</li>
+                        <li>ملفات نحاس 100%</li>
+                        <li>عمود استانلس ستيل</li>
+                        <li>مروحة نحاس ووش توجيه زهر</li>
+                        <li>عزل ضد الصدأ ومعالج حرارياً</li>
+                        <li>مزود بشيك بلف، يد، وفيشة</li>
+                        <li>فتحة دخول وخروج 1 بوصة</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">4,100 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Shox - موتور 1 حصان (JET-50)</h3>
+                    <span class="origin-badge">Made in Germany 🇩🇪</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>موبينة 5 بقطر كبير</li>
+                        <li>ملفات نحاس 100%</li>
+                        <li>عمود استانلس ستيل</li>
+                        <li>مروحة نحاس ووش توجيه زهر</li>
+                        <li>عزل ضد الصدأ ومعالج حرارياً</li>
+                        <li>مزود بشيك بلف، يد، وفيشة</li>
+                        <li>فتحة دخول وخروج 1 بوصة</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">3,300 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Stefano - موتور (JET-80G)</h3>
+                    <span class="origin-badge">Made in Italy 🇮🇹</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>موبينة 8</li>
+                        <li>ملفات نحاس 100%</li>
+                        <li>عمود استانلس ستيل</li>
+                        <li>مروحة نحاس ووش توجيه زهر</li>
+                        <li>عزل ضد الصدأ ومعالج حرارياً</li>
+                        <li>فتحة دخول وخروج 1 بوصة</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">4,500 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Sero - موتور (JET MB60)</h3>
+                    <span class="origin-badge">Made in China 🇨🇳</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>موبينة 5</li>
+                        <li>تحضير ذاتي</li>
+                        <li>فتحة دخول وخروج 1 بوصة</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">1,750 ج.م</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- القسم الثاني: مرفقات المواتير -->
+        <h2 class="section-title">🛠️ قسم مرفقات المواتير</h2>
+        <div class="grid">
+            
+            <!-- منتج 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">STAR - فلوماك شفاف + حماية</h3>
+                    <span class="origin-badge">صنع في مصر 🇪🇬</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>أول مصنع للفلوماك في مصر</li>
+                        <li>تحمل ضغط حتى 18 بار</li>
+                        <li>شيك بلف نحاس 100%</li>
+                        <li>مزود بعداد قياس ضغط</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">750 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">TOMA - مفتاح ضغط SK-6</h3>
+                    <span class="origin-badge">Made in Italy 🇮🇹</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>الجهد: 220V-240V / 50-60Hz</li>
+                        <li>أقصى شدة تيار: 12A</li>
+                        <li>درجة الحماية: IP20</li>
+                        <li>أقصى درجة حرارة تشغيل: 40°C</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">250 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">EXTRA YORKA - فلوماك ديجيتال</h3>
+                    <span class="origin-badge">Made in Italy 🇮🇹</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>ضغط عالي يصل لـ 22 بار</li>
+                        <li>شاشة وعرض ديجيتال + عداد ضغط</li>
+                        <li>بدء تشغيل قابل للتعديل (0.8 - 6 بار)</li>
+                        <li>230V / 10A / IP54 / 60°C</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">1,800 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">RB - بالونة موتور 24 لتر</h3>
+                    <span class="origin-badge">صنع في مصر 🇪🇬</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>السعة: 24 لتر</li>
+                        <li>استقرار ضغط المياه وتقليل مرات التشغيل</li>
+                        <li>خامات متينة وضغط عالي</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">600 ج.م</span>
+                </div>
+            </div>
+
+            <!-- منتج 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Mintra Tank - بالونة موتور 8 لتر</h3>
+                    <span class="origin-badge">Made in Italy 🇮🇹</span>
+                </div>
+                <div class="card-body">
+                    <ul class="specs-list">
+                        <li>السعة: 8 لتر</li>
+                        <li>حماية من الصدمات المائية</li>
+                        <li>مناسبة للمساحات الصغير والجودة العالية</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="price-label">السعر:</span>
+                    <span class="price-value">375 ج.م</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © شركة أبو سيفين للمواتير ومستلزماتها</p>
+    </footer>
+
+</body>
+  </html>
+  
