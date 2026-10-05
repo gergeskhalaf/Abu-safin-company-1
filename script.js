@@ -41,7 +41,7 @@ const PRODUCTS = [
   },
  {
   category: "motors", name :"Maro 0.5 HP", origin: "Made in Italy 🇮🇹",
-  price: 1350, img: "maro05hp.jpg",
+  price: 1300, img: "maro05hp.jpg",
   specs: ["نحاس 100٪ ", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة","ترس نحاس"]
 },
   // ---- مرفقات المواتير وقطع الغيار ----
