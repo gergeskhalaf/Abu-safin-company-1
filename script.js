@@ -39,7 +39,11 @@ const PRODUCTS = [
     price: 1750, img: "sero.jpg",
     specs: ["موبينة 5", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة"]
   },
-
+ {
+  category: "motors", name :"Maro 0.5 HP", origin: "Made in Italy 🇮🇹",
+  price: 1250, img: "maro05hp.jpg",
+  specs: ["نحاس 100٪ ", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة","ترس نحاس"]
+},
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
