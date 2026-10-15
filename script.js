@@ -50,6 +50,11 @@ const PRODUCTS = [
     price: 1300, img: "maro05hp.jpg",
     specs: ["ملفات نحاس 100%", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة", "ترس نحاس"]
   },
+  {
+    category: "motors", name: "Toma - موتور مياه 1 حصان (JET-100)", origin: "Made in Germany 🇩🇪",
+    price: 4400, img: "toma-1hp.jpg",
+    specs: ["حماية حرارية", "قطر الموبينة 8", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
+  },
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
