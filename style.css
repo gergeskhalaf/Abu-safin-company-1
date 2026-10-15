@@ -88,6 +88,14 @@ img { max-width: 100%; display: block; }
 .btn-whatsapp { background: var(--whatsapp); color: #fff; }
 .btn-whatsapp:hover { background: var(--whatsapp-dark); }
 .btn-light { background: #fff; color: var(--primary); }
+.btn-call { background: var(--primary); color: #fff; }
+.btn-call:hover { background: var(--primary-dark); }
+
+/* وضوح التركيز عند التنقل بالكيبورد */
+a:focus-visible, .btn:focus-visible, .search:focus-visible {
+  outline: 3px solid #ffb74d;
+  outline-offset: 2px;
+}
 
 /* ===== Sections ===== */
 .section-title {
@@ -148,6 +156,7 @@ img { max-width: 100%; display: block; }
 }
 .contact-box h3 { color: var(--primary); margin-bottom: 8px; }
 .contact-box .phone { font-size: 1.5rem; font-weight: bold; color: var(--accent); direction: ltr; margin-bottom: 16px; }
+.contact-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ===== Products ===== */
 .toolbar { margin: 24px 0 8px; }
@@ -239,6 +248,12 @@ footer {
   font-size: .92rem;
 }
 footer .phone { direction: ltr; display: inline-block; font-weight: bold; }
+
+/* احترام إعداد تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
 
 /* ===== Mobile ===== */
 @media (max-width: 600px) {

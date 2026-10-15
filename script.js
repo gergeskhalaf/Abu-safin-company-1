@@ -1,7 +1,8 @@
 // ====== إعدادات المتجر ======
 const STORE = {
   name: "شركة أبو سيفين للتجارة",
-  phone: "201142002900" // رقم الواتساب بصيغة دولية
+  phone: "201142002900", // رقم الواتساب بصيغة دولية
+  localPhone: "01142002900" // الرقم المحلي للاتصال المباشر
 };
 
 // صورة بديلة تظهر لو صورة المنتج لسه مترفعتش
@@ -39,11 +40,11 @@ const PRODUCTS = [
     price: 1750, img: "sero.jpg",
     specs: ["موبينة 5", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة"]
   },
- {
-  category: "motors", name :"Maro 0.5 HP", origin: "Made in Italy 🇮🇹",
-  price: 1300, img: "maro05hp.jpg",
-  specs: ["نحاس 100٪ ", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة","ترس نحاس"]
-},
+  {
+    category: "motors", name: "Maro - موتور نصف حصان (0.5 HP)", origin: "Made in Italy 🇮🇹",
+    price: 1300, img: "maro05hp.jpg",
+    specs: ["ملفات نحاس 100%", "تحضير ذاتي", "فتحة دخول وخروج 1 بوصة", "ترس نحاس"]
+  },
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
@@ -82,9 +83,23 @@ function fmt(n) {
 }
 
 function esc(s) {
-  const d = document.createElement("div");
-  d.textContent = s;
-  return d.innerHTML;
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// توحيد النص العربي للبحث (يتجاهل التشكيل واختلاف الهمزات والتاء المربوطة)
+function norm(s) {
+  return String(s)
+    .toLowerCase()
+    .replace(/[ً-ْـ]/g, "")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ة/g, "ه")
+    .trim();
 }
 
 function cardHTML(p) {
@@ -125,11 +140,16 @@ if (box) {
 
   if (search) {
     search.addEventListener("input", () => {
-      const q = search.value.trim().toLowerCase();
-      render(items.filter(p => (p.name + " " + p.specs.join(" ")).toLowerCase().includes(q)));
+      const q = norm(search.value);
+      render(items.filter(p => norm(p.name + " " + p.origin + " " + p.specs.join(" ")).includes(q)));
     });
   }
 }
+
+// ====== أزرار الاتصال المباشر (data-tel) ======
+document.querySelectorAll("[data-tel]").forEach(el => {
+  el.href = "tel:+" + STORE.phone;
+});
 
 // ====== أزرار الواتساب العامة (data-wa) ======
 document.querySelectorAll("[data-wa]").forEach(el => {
