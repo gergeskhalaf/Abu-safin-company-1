@@ -71,7 +71,7 @@ const PRODUCTS = [
     specs: ["حماية حرارية", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
   },
   {
-    category: "motors", name: "Terra - موتور مياه", origin: "Made in Germany 🇩🇪",
+    category: "motors", name: "Terra - موتور مياه (JET-100)", origin: "Made in Germany 🇩🇪",
     price: 2800, img: "terra.jpg",
     specs: ["حماية حرارية", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
   },
