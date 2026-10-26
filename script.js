@@ -70,6 +70,11 @@ const PRODUCTS = [
     price: 3400, img: "expo-jet100.jpg",
     specs: ["حماية حرارية", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
   },
+  {
+    category: "motors", name: "Terra - موتور مياه", origin: "Made in Germany 🇩🇪",
+    price: 2800, img: "terra.jpg",
+    specs: ["حماية حرارية", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
+  },
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
