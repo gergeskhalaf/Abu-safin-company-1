@@ -75,6 +75,11 @@ const PRODUCTS = [
     price: 2800, img: "terra.jpg",
     specs: ["حماية حرارية", "ملفات نحاس", "وش توجيه زهر", "مروحة نحاس", "عزل ضد الصدأ"]
   },
+  {
+    category: "motors", name: "Porto - موتور مياه اقتصادي (JET MB60)", origin: "Made in Italy 🇮🇹",
+    price: 1800, img: "porto-mb60.jpg",
+    specs: ["موتور اقتصادي بسعر مناسب", "تحضير ذاتي", "موديل JET MB60"]
+  },
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
