@@ -105,6 +105,11 @@ const PRODUCTS = [
     category: "accessories", name: "Mintra Tank - بالونة موتور 8 لتر", origin: "Made in Italy 🇮🇹",
     price: 375, img: "mintra.jpg",
     specs: ["السعة: 8 لتر", "حماية من الصدمات المائية", "مناسبة للمساحات الصغيرة وجودة عالية"]
+  },
+  {
+    category: "accessories", name: "LC - كنترول ضغط إلكتروني (Pressure Control)", origin: "Made in Italy 🇮🇹",
+    price: 900, img: "lc-pressure-control.jpg",
+    specs: ["ضغط عالي", "كنترول ضغط إلكتروني أوتوماتيك"]
   }
 ];
 
