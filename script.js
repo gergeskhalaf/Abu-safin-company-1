@@ -80,6 +80,11 @@ const PRODUCTS = [
     price: 1800, img: "porto-mb60.jpg",
     specs: ["موتور اقتصادي بسعر مناسب", "تحضير ذاتي", "موديل JET MB60"]
   },
+  {
+    category: "motors", name: "A.M - موتور مياه (JET-100)", origin: "Made in Germany 🇩🇪",
+    price: 2800, img: "am-jet100.jpg",
+    specs: ["عمود استانلس", "ملفات نحاس"]
+  },
   // ---- مرفقات المواتير وقطع الغيار ----
   {
     category: "accessories", name: "STAR - فلوماك شفاف + حماية", origin: "صنع في مصر 🇪🇬",
