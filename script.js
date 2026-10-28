@@ -115,6 +115,12 @@ const PRODUCTS = [
     category: "accessories", name: "LC - كنترول ضغط إلكتروني (Pressure Control)", origin: "Made in Italy 🇮🇹",
     price: 900, img: "lc-pressure-control.jpg",
     specs: ["ضغط عالي", "كنترول ضغط إلكتروني أوتوماتيك"]
+  },
+  {
+    // بدون سعر: بيظهر "اسأل عن السعر" وزر واتساب
+    category: "accessories", name: "Rozzet - شفاط مزرعة",
+    img: "rozzet-fan.jpg",
+    specs: ["المقاسات المتاحة: 12 - 14 - 16 - 24 بوصة", "مزود بشبكة حماية"]
   }
 ];
 
@@ -148,7 +154,10 @@ function norm(s) {
 }
 
 function cardHTML(p) {
-  const msg = `مرحباً ${STORE.name}، عايز أطلب:\n${p.name}\nالسعر: ${fmt(p.price)} ج.م`;
+  const hasPrice = typeof p.price === "number";
+  const msg = hasPrice
+    ? `مرحباً ${STORE.name}، عايز أطلب:\n${p.name}\nالسعر: ${fmt(p.price)} ج.م`
+    : `مرحباً ${STORE.name}، عايز أسأل عن سعر:\n${p.name}`;
   return `
     <div class="card">
       <div class="card-img">
@@ -157,14 +166,16 @@ function cardHTML(p) {
       </div>
       <div class="card-header">
         <h3 class="card-title">${esc(p.name)}</h3>
-        <span class="origin-badge">${esc(p.origin)}</span>
+        ${p.origin ? `<span class="origin-badge">${esc(p.origin)}</span>` : ""}
       </div>
       <div class="card-body">
         <ul class="specs-list">${p.specs.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
       </div>
       <div class="card-footer">
-        <div class="price"><small>السعر: </small>${fmt(p.price)} ج.م</div>
-        <a class="btn btn-whatsapp" href="${waLink(msg)}" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+        ${hasPrice
+          ? `<div class="price"><small>السعر: </small>${fmt(p.price)} ج.م</div>`
+          : `<div class="price price-ask">اسأل عن السعر على واتساب</div>`}
+        <a class="btn btn-whatsapp" href="${waLink(msg)}" target="_blank" rel="noopener">${hasPrice ? "اطلب عبر واتساب" : "اسأل عن السعر"}</a>
       </div>
     </div>`;
 }
@@ -186,7 +197,7 @@ if (box) {
   if (search) {
     search.addEventListener("input", () => {
       const q = norm(search.value);
-      render(items.filter(p => norm(p.name + " " + p.origin + " " + p.specs.join(" ")).includes(q)));
+      render(items.filter(p => norm(p.name + " " + (p.origin || "") + " " + p.specs.join(" ")).includes(q)));
     });
   }
 }

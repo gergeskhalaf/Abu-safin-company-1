@@ -262,3 +262,5 @@ footer .phone { direction: ltr; display: inline-block; font-weight: bold; }
   .grid { grid-template-columns: 1fr; }
   .brand { font-size: 1.05rem; }
 }
+
+.price.price-ask { font-size: 1.05rem; }
